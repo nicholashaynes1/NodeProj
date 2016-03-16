@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADEADD711C99DB9B00858480 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD701C99DB9B00858480 /* main.cpp */; };
+		ADEADD871C99DC1000858480 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD781C99DC1000858480 /* NodeController.cpp */; };
+		ADEADD881C99DC1000858480 /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD7A1C99DC1000858480 /* NodeRunner.cpp */; };
+		ADEADD891C99DC1000858480 /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD7C1C99DC1000858480 /* ArrayNode.cpp */; };
+		ADEADD8A1C99DC1000858480 /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD7E1C99DC1000858480 /* CTECArray.cpp */; };
+		ADEADD8B1C99DC1000858480 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD801C99DC1000858480 /* CTECList.cpp */; };
+		ADEADD8C1C99DC1000858480 /* CTECList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD811C99DC1000858480 /* CTECList.cpp */; };
+		ADEADD8D1C99DC1000858480 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD831C99DC1000858480 /* Node.cpp */; };
+		ADEADD8E1C99DC1000858480 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADEADD851C99DC1000858480 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +31,20 @@
 
 /* Begin PBXFileReference section */
 		ADEADD6D1C99DB9B00858480 /* NodeProj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NodeProj; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADEADD701C99DB9B00858480 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ADEADD781C99DC1000858480 /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
+		ADEADD791C99DC1000858480 /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
+		ADEADD7A1C99DC1000858480 /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeRunner.cpp; sourceTree = "<group>"; };
+		ADEADD7C1C99DC1000858480 /* ArrayNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayNode.cpp; sourceTree = "<group>"; };
+		ADEADD7D1C99DC1000858480 /* ArrayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayNode.h; sourceTree = "<group>"; };
+		ADEADD7E1C99DC1000858480 /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
+		ADEADD7F1C99DC1000858480 /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		ADEADD801C99DC1000858480 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		ADEADD811C99DC1000858480 /* CTECList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECList.cpp; sourceTree = "<group>"; };
+		ADEADD821C99DC1000858480 /* CTECList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECList.h; sourceTree = "<group>"; };
+		ADEADD831C99DC1000858480 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		ADEADD841C99DC1000858480 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		ADEADD851C99DC1000858480 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		ADEADD861C99DC1000858480 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +61,8 @@
 		ADEADD641C99DB9B00858480 = {
 			isa = PBXGroup;
 			children = (
-				ADEADD6F1C99DB9B00858480 /* NodeProj */,
+				ADEADD771C99DC1000858480 /* Controller */,
+				ADEADD7B1C99DC1000858480 /* Model */,
 				ADEADD6E1C99DB9B00858480 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +75,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADEADD6F1C99DB9B00858480 /* NodeProj */ = {
+		ADEADD771C99DC1000858480 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ADEADD701C99DB9B00858480 /* main.cpp */,
+				ADEADD781C99DC1000858480 /* NodeController.cpp */,
+				ADEADD791C99DC1000858480 /* NodeController.h */,
+				ADEADD7A1C99DC1000858480 /* NodeRunner.cpp */,
 			);
-			path = NodeProj;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADEADD7B1C99DC1000858480 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADEADD7C1C99DC1000858480 /* ArrayNode.cpp */,
+				ADEADD7D1C99DC1000858480 /* ArrayNode.h */,
+				ADEADD7E1C99DC1000858480 /* CTECArray.cpp */,
+				ADEADD7F1C99DC1000858480 /* CTECArray.h */,
+				ADEADD801C99DC1000858480 /* CTECList.cpp */,
+				ADEADD811C99DC1000858480 /* CTECList.cpp */,
+				ADEADD821C99DC1000858480 /* CTECList.h */,
+				ADEADD831C99DC1000858480 /* Node.cpp */,
+				ADEADD841C99DC1000858480 /* Node.h */,
+				ADEADD851C99DC1000858480 /* Timer.cpp */,
+				ADEADD861C99DC1000858480 /* Timer.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEADD711C99DB9B00858480 /* main.cpp in Sources */,
+				ADEADD8B1C99DC1000858480 /* CTECList.cpp in Sources */,
+				ADEADD871C99DC1000858480 /* NodeController.cpp in Sources */,
+				ADEADD881C99DC1000858480 /* NodeRunner.cpp in Sources */,
+				ADEADD891C99DC1000858480 /* ArrayNode.cpp in Sources */,
+				ADEADD8C1C99DC1000858480 /* CTECList.cpp in Sources */,
+				ADEADD8E1C99DC1000858480 /* Timer.cpp in Sources */,
+				ADEADD8A1C99DC1000858480 /* CTECArray.cpp in Sources */,
+				ADEADD8D1C99DC1000858480 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

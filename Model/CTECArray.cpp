@@ -60,6 +60,27 @@ CTECArray<Type>::~CTECArray()
 	delete head;
 }
 
+/*
+    Gets the position of the item being searched for in the list.
+*/
+template<class Type>
+int CTECArray<Type>::indexOf(Type searchValue)
+{
+    assert(this->size<0);
+    ArrayNode<Type> * current = head;
+    int indexNotFound = -1;
+    
+    for(int index = 0; index < this->size; index++)
+    {
+        if(current->getValue == searchValue)
+        {
+            return index;
+        }
+    }
+    
+    return indexNotFound;
+}
+
 
 
 template<class Type>

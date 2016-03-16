@@ -18,7 +18,7 @@ private:
 public:
 	CTECArray(int size);
 	virtual ~CTECArray();
-
+    int indexOf(Type searchValue);
 	Type get(int pos);
 	int getSize();
 	void set(int pos, const Type& value);

@@ -31,6 +31,7 @@ public:
 	Type getFromIndex(int index);
 	Type set(int index, const Type& Value);
 	int getSize();
+    int indexOf(Type searchValue);
 };
 
 #endif /* MODEL_CTECLIST_H_ */

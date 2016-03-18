@@ -33,7 +33,7 @@ void CTECList<Type>::addAtIndex(int index, const Type& value)
 	assert(index < size);
 
 	ArrayNode<Type> * currentSpot = head;
-	ArrayNode<Type> * nextSpot;
+	ArrayNode<Type> * nextSpot = nullptr;
 	ArrayNode<Type> * newNext;
 	ArrayNode<Type> * newNode = new ArrayNode<Type>(value);
 
@@ -116,10 +116,10 @@ Type CTECList<Type>::removeFromIndex(int index)
 	assert(index >= 0);
 	assert(index < size);
 	assert(this->size > 0);
-	Type storedValue;
+	Type storedValue = 0;
 	ArrayNode<Type> * current = head;
-	ArrayNode<Type> * previousSpot;
-	ArrayNode<Type> * newNext;
+	ArrayNode<Type> * previousSpot = nullptr;
+	ArrayNode<Type> * newNext = nullptr;
 
 	for (int spot = 0; spot < index + 1; spot++)
 	{
@@ -172,11 +172,12 @@ Type CTECList<Type>::removeFromEnd()
 		current->setNext(nullptr);
 	}
 
-
+    return returnValue;
 
 	calculateSize();
 
 }
+
 
 
 template<class Type>
@@ -220,7 +221,7 @@ template<class Type>
 Type CTECList<Type>::getFromIndex(int index)
 {
 	ArrayNode<Type> * current = head;
-	Type valueHolder;
+	Type valueHolder = 0;
 
 	assert(index >= 0);
 	assert(index < size);
@@ -263,6 +264,30 @@ void CTECList<Type>::calculateSize()
 	size = count;
 }
 
+
+template <class Type>
+int CTECList<Type> :: indexOf(Type searchValue)
+{
+    assert(this->size > 0);
+    int index;
+    
+    ArrayNode<Type> * searchPointer;
+    
+    for(searchPointer = head; searchPointer != nullptr; searchPointer->getNext())
+    {
+        if(searchValue == searchPointer->getValue())
+           {
+               return index;
+           }
+           
+           
+           
+           index++;
+    }
+    
+    
+    return index;
+}
 
 
 template<class Type>

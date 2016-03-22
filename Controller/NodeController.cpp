@@ -23,9 +23,10 @@ NodeController :: ~NodeController()
 void NodeController :: testList()
 {
     
-    numbers->addAtIndex(1,188);
+    
 	numbers->addToFront(3);
 	numbers->addToEnd(8);
+    numbers->addAtIndex(1,188);
 
 	cout << "End should be 8 and is " << numbers->getEnd() << endl;
     cout << "Front should be 3 and is " << numbers->getFront() << endl;
@@ -36,10 +37,13 @@ void NodeController :: testList()
     
     numbers->removeFromEnd();
     cout << "the end should be 19 and is " << numbers->getEnd() << endl;
-    numbers->removeFromIndex(1);
+    numbers->removeFromIndex(2);
     cout << "the index 1 should be 188 and is" << numbers->getFromIndex(1) << endl;
     numbers->removeFromFront();
     cout << "the beginning should be 188 and is" << numbers->getFront() << endl;
+    
+    cout << "the size of the list should be 2 and is" << numbers->getSize();
+    cout << "the index of 19 should be 1 and is" << numbers->indexOf(2);
     
     
     

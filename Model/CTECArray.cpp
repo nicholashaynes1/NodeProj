@@ -91,6 +91,32 @@ void CTECArray<Type> :: swap(int indexOne, int indexTwo)
 }
 
 
+
+template<class Type>
+void CTECArray<Type>::selectionSort()
+{
+    for(int outerLoop = 0; outerLoop < size - 1; outerLoop++)
+    {
+        int selectedMin = outerLoop;
+        
+        for(int innerLoop = outerLoop + 1; innerLoop < size; innerLoop++)
+        {
+            if(get(innerLoop) < get(selectedMin))
+            {
+                selectedMin = innerLoop;
+            }
+        }
+        if(selectedMin != outerLoop)
+        {
+            swap(selectedMin, outerLoop);
+        }
+        
+        
+    }
+}
+
+
+
 template<class Type>
 Type CTECArray<Type>::get(int pos)
 {

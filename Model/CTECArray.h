@@ -23,6 +23,8 @@ public:
 	Type get(int pos);
 	int getSize();
 	void set(int pos, const Type& value);
+    void selectionSort();
+
 };
 
 #endif /* MODEL_CTECARRAY_H_ */

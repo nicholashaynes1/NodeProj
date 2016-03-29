@@ -24,6 +24,7 @@ public:
 	void addToEnd(const Type& value);
 	void addToFront(const Type& value);
     void swap(int indexOne, int indexTwo);
+    void selectionSort();
 	Type removeFromFront();
 	Type removeFromIndex(int index);
 	Type removeFromEnd();

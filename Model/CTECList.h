@@ -22,7 +22,8 @@ public:
 	virtual ~CTECList();
 	void addAtIndex(int index, const Type& value);
 	void addToEnd(const Type& value);
-	void addToFront(const Type& value);\
+	void addToFront(const Type& value);
+    void swap(int indexOne, int indexTwo);
 	Type removeFromFront();
 	Type removeFromIndex(int index);
 	Type removeFromEnd();

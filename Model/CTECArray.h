@@ -18,6 +18,7 @@ private:
 public:
 	CTECArray(int size);
 	virtual ~CTECArray();
+    void swap(int indexOne, int indexTwo);
     int indexOf(Type searchValue);
 	Type get(int pos);
 	int getSize();

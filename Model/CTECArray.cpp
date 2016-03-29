@@ -81,6 +81,14 @@ int CTECArray<Type>::indexOf(Type searchValue)
     return indexNotFound;
 }
 
+template<class Type>
+void CTECArray<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = get(indexOne);
+    set(indexOne, get(indexTwo));
+    set(indexTwo, temp);
+}
 
 
 template<class Type>

@@ -75,3 +75,19 @@ void NodeController :: start()
 //	arrayTimer.displayTimerInfo();
 
 }
+
+
+
+void NodeController::sortData()
+{
+    
+}
+
+
+
+
+
+
+
+
+

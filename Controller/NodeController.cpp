@@ -6,6 +6,7 @@
  */
 #include "NodeController.h"
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 NodeController :: NodeController()
@@ -80,6 +81,30 @@ void NodeController :: start()
 
 void NodeController::sortData()
 {
+    CTECArray<int> randomNumberArray(5000);
+    CTECList<int> randomNumberList;
+    int myCPlusPlusArray[5000];
+    
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int myRandom = rand();
+        randomNumberArray.set(spot, myRandom);
+        randomNumberList.addToEnd(myRandom);
+        myCPlusPlusArray[spot] = myRandom;
+    }
+    Timer sortTimer;
+    sortTimer.startTimer();
+    sortTimer.stopTimer();
+    sortTimer.displayTimerInfo();
+    
+    sortTimer.resetTimer();
+    
+    sortTimer.startTimer();
+    std::sort(std::begin(myCPlusPlusArray), std::end(myCPlusPlusArray));
+    sortTimer.stopTimer();
+    sortTimer.displayTimerInfo();
+    
+    sortTimer.resetTimer();
     
 }
 

@@ -24,6 +24,7 @@ private:
 	Timer arrayTimer;
 	CTECArray<int> * notHipsterInts;
 	CTECList<int> * numbers;
+    void sortData();
 
 public:
 	void testList();

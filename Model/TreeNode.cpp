@@ -7,7 +7,7 @@
 //
 
 #include "TreeNode.hpp"
-using namespace CTECData;
+
 
 template <class Type>
 TreeNode<Type> :: TreeNode() : Node<Type>()

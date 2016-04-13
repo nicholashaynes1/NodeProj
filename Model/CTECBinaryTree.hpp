@@ -17,7 +17,9 @@ private:
     int size;
     TreeNode<Type> * root;
     int height;
+    void calculateSize(TreeNode<Type> * currentNode);
     bool balenced;
+    bool contains(Type value, CTECBinaryTree<Type> * currentTree);
     
 public:
     CTECBinaryTree();

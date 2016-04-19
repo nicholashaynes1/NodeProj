@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ADD56AE71CC6BDE800AA1016 /* CTECBinaryTree.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTree.hh; sourceTree = "<group>"; };
 		ADE11A611CBC1D0400F2A725 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		ADE11A621CBC1D0400F2A725 /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 		ADE11A641CBC2D4700F2A725 /* CTECBinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTree.cpp; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 				ADE11A621CBC1D0400F2A725 /* TreeNode.hpp */,
 				ADE11A641CBC2D4700F2A725 /* CTECBinaryTree.cpp */,
 				ADE11A651CBC2D4700F2A725 /* CTECBinaryTree.hpp */,
+				ADD56AE71CC6BDE800AA1016 /* CTECBinaryTree.hh */,
 			);
 			path = Model;
 			sourceTree = "<group>";

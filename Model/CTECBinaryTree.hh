@@ -21,8 +21,6 @@ private:
     bool balenced;
     bool contains(Type value, CTECBinaryTree<Type> * currentTree);
     TreeNode<Type> * getRightMostChild(CTECBinaryTree<Type> leftSubTree);
-    TreeNode<Type> * getLeftMostChild(CTECBinaryTree<Type> rightSubTree);
-
     
 public:
     CTECBinaryTree();

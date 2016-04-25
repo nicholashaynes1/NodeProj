@@ -20,7 +20,8 @@ private:
     int manyVertices;
 
 public:
-    
+    CTECGraph();
+    ~CTECGraph();
     
     
 };

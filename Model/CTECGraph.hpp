@@ -12,4 +12,16 @@
 #include <stdio.h>
 template<class Type>
 class CTECGraph
+{
+private:
+    static const int MAXIMUM = 20;
+    bool adjacencyMatrix [MAXIMUM] [MAXIMUM];
+    Type labels[MAXIMUM];
+    int manyVertices;
+
+public:
+    
+    
+    
+};
 #endif /* CTECGraph_hpp */

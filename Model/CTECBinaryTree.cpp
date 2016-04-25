@@ -204,4 +204,46 @@ TreeNode<Type> * CTECBinaryTree<Type>:: getLeftMostChild(CTECBinaryTree<Type> ri
 }
 
 
+template<class Type>
+void CTECBinaryTree<Type> :: remove(const Type& value)
+{
+    TreeNode<Type> * current;
+    TreeNode<Type> * trailing;
+    
+    if(!contains(value))
+    {
+        return;
+    }
+    else
+    {
+        current = root;
+        trailing =root;
+        
+        while(current != nullptr && current->getValue() != value)
+        {
+            trailing = current;
+            if(current->getValue() > value)
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        if(current == root)
+        {
+            remove(root);
+        }
+        else if(trailing->getValue() > value)
+        {
+            remove(trailing->getLeftChild());
+        }
+        else
+        {
+            remove(trailing->hetRightChild());
+        }
+    }
+    
+}
 

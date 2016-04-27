@@ -7,6 +7,9 @@
 //
 
 #include "CTECGraph.hpp"
+#include <iostream>
+#include <queue>
+using namespace std;
 
 template<class Type>
 const int CTECGraph<Type> :: MAXIMUM;
@@ -79,7 +82,46 @@ assert(source < size() && target < size());
 
 
 
+template <class Type>
+void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex)
+{
+    bool markedVerticies[MAXIMUM];
+    assert(vertex < currentGraph.size());
+    std::fill_n(markedVerticies, currentGraph.size(), false);
+    depthFirstTraversal(currentGraph, vertex, markedVerticies);
+}
 
+template <class Type>
+void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex, bool * markedVertecies)
+{
+    std::set<int> connections = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    markedVertecies[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        if(!markedVertecies[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, markedVertecies);
+        }
+    }
+}
+template <class Type>
+void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>::iterator setIterator;
+    std::queue<int> vertexQueue;
+    assert(vertex < currentGraph.size());
+    
+    std::fill_n(markedVertices,currentGraph.size(), false);
+    markedVertices[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    vertexQueue.push(vertex);
+}
 
 
 

@@ -18,6 +18,7 @@ private:
     bool adjacencyMatrix [MAXIMUM] [MAXIMUM];
     Type labels[MAXIMUM];
     int manyVertices;
+    void depthFirstTraversal(CTECGraph<Type> graph, int vertex, bool markedVertecies[]);
 
 public:
     CTECGraph();
@@ -30,5 +31,7 @@ public:
     int size();
     bool isEdge(int source, int target)const;
     std::set<int> neighbors(int vertex) const;
+    void depthFirstTraversal(CTECGraph<Type> graph, int vertex);
+    void breadthFirstTraversal(CTECGraph<Type> graph, int vertex);
 };
 #endif /* CTECGraph_hpp */

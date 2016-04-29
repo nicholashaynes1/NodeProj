@@ -18,13 +18,17 @@ CTECBinaryTree<Type> :: CTECBinaryTree()
     this->balenced = true;
 }
 
-
+template<class Type>
+CTECBinaryTree<Type> :: ~CTECBinaryTree()
+{
+    
+}
 
 template<class Type>
 int CTECBinaryTree<Type> :: getSize()
 {
     size = 0;
-    size = calculatedSize(root);
+    calculateSize(root);
     return size;
 }
 
@@ -34,12 +38,13 @@ void CTECBinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
-        calculateSize(currentNode -> getleftChild);
-        calculateSize(currentNode->getRightChild);
+        calculateSize(currentNode -> getLeftChild());
+        calculateSize(currentNode->getRightChild());
         size++;
         
         
     }
+    
 }
 
 template<class Type>
@@ -53,7 +58,7 @@ void CTECBinaryTree<Type> :: preorderTraversal(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
-        cout << currentNode->getValue() << " ";
+        cout << currentNode->getValue() << " " << endl;
         
         preorderTraversal(currentNode->getLeftChild());
         preorderTraversal(currentNode->getRightChild());
@@ -66,7 +71,7 @@ void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
     if(currentNode != nullptr)
     {
         inorderTraversal(currentNode->getLeftChild());
-         cout << currentNode->getValue() << " ";
+        cout << currentNode->getValue() << " " << endl;
         inorderTraversal(currentNode->getRightChild());
     }
 }
@@ -77,7 +82,7 @@ void CTECBinaryTree<Type> :: postorderTraversal(TreeNode<Type> * currentNode)
     {
         postorderTraversal(currentNode->getLeftChild());
         postorderTraversal(currentNode->getRightChild());
-        cout << currentNode->getValue() << " ";
+        cout << currentNode->getValue() << " " << endl;
     }
 }
 
@@ -99,7 +104,7 @@ bool CTECBinaryTree<Type> :: contains(Type Value)
             }
             else
             {
-                isInTree = contains(Value, root->getRightChild);
+                isInTree = contains(Value, root->getRightChild());
             }
         
         }
@@ -121,7 +126,7 @@ bool CTECBinaryTree<Type> :: contains(Type Value, TreeNode<Type> * currentTree)
     
     if(currentTree != nullptr)
     {
-        if(currentTree->getRoot() -> getValue() == Value)
+        if(currentTree -> getValue() == Value)
         {
             isInTree = true;
         }
@@ -133,7 +138,7 @@ bool CTECBinaryTree<Type> :: contains(Type Value, TreeNode<Type> * currentTree)
             }
             else
             {
-                isInTree = contains(Value, currentTree->getRightChild);
+                isInTree = contains(Value, currentTree->getRightChild());
             }
 
         }
@@ -145,8 +150,6 @@ bool CTECBinaryTree<Type> :: contains(Type Value, TreeNode<Type> * currentTree)
 template<class Type>
 bool CTECBinaryTree<Type> :: insert(const Type& value)
 {
-    TreeNode<Type> * current = root;
-    TreeNode<Type> * parentOfCurrent;
     
     if(contains(value))
     {
@@ -154,33 +157,49 @@ bool CTECBinaryTree<Type> :: insert(const Type& value)
     }
     else
     {
-        while(current != nullptr)
+        TreeNode<Type> * current = root;
+        TreeNode<Type> * trailNode;
+       
+        if(root == nullptr)
         {
-            parentOfCurrent = current;
-            
-            if(current->getValue > value)
-            {
-                current->getLeftChild();
-            }
-            else
-            {
-                current->getRightChild();
-            }
-        }
-        if(parentOfCurrent->getValue > value)
-        {
-            current->setLeftChild(value);
+            root = new TreeNode<Type>(value);
         }
         else
         {
-            current->setRightChild(value);
+            while(current != nullptr)
+            {
+                trailNode = current;
+                
+                if(current->getValue() > value)
+                {
+                    current = current->getLeftChild();
+                    
+                }
+                else
+                {
+                    current = current->getRightChild();
+                    
+                }
+            }
+            if(trailNode->getValue() > value)
+            {
+                trailNode->setLeftChild(new TreeNode<Type>(value, trailNode));
+                
+            }
+            else
+            {
+                TreeNode<Type> * insertedNode = new TreeNode<Type>(value, trailNode);
+                trailNode->setRightChild(insertedNode);
+                 
+            }
+
         }
     }
     return true;
 }
 
 template <class Type>
-TreeNode<Type> * CTECBinaryTree<Type>:: getRightMostChild(TreeNode<Type> leftSubTree)
+TreeNode<Type> * CTECBinaryTree<Type>:: getRightMostChild(TreeNode<Type> * leftSubTree)
 {
     TreeNode<Type> * rightNode= leftSubTree->getRoot();
     while(rightNode->getRightChild() != nullptr)
@@ -192,7 +211,7 @@ TreeNode<Type> * CTECBinaryTree<Type>:: getRightMostChild(TreeNode<Type> leftSub
 }
 
 template <class Type>
-TreeNode<Type> * CTECBinaryTree<Type>:: getLeftMostChild(TreeNode<Type> rightSubTree)
+TreeNode<Type> * CTECBinaryTree<Type>:: getLeftMostChild(TreeNode<Type> * rightSubTree)
 {
     TreeNode<Type> * leftNode= rightSubTree->getRoot();
     while(leftNode->getleftChild() != nullptr)

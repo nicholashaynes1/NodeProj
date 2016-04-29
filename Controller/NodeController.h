@@ -13,6 +13,8 @@
 #include "../Model/CTECArray.cpp"
 #include "../Model/Timer.h"
 #include "../model/CTECList.cpp"
+#include "../model/CTECGraph.cpp"
+#include "../model/CTECBinaryTree.cpp"
 
 
 #include <string>
@@ -36,6 +38,9 @@ private:
     void quicksort(int first, int last);
     int partition(int first, int last);
     void doQuick();
+    
+    void tryGraphs();
+    void tryTrees();
 
 public:
 	void testList();

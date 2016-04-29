@@ -57,7 +57,8 @@ void NodeController :: testList()
 
 void NodeController :: start()
 {
-    doMergesort();
+    tryTrees();
+//    doMergesort();
 	
 //	arrayTimer.startTimer();
 //
@@ -258,7 +259,31 @@ void NodeController::doQuick()
 
 
 
+void NodeController::tryGraphs()
+{
+//    CTECGraph<int> testGraph;
+//    testGraph.addVertex(4);
+}
 
+void NodeController::tryTrees()
+{
+    
+    CTECBinaryTree<int> testTree;
+    testTree.insert(1);
+    testTree.insert(5);
+    testTree.insert(7);
+    testTree.insert(3);
+    testTree.insert(2);
+    testTree.insert(8);
+    testTree.insert(12);
+    
+    testTree.getSize();
+    testTree.postorderTraversal(testTree.getRoot());
+    
+    
+    
+
+}
 
 
 

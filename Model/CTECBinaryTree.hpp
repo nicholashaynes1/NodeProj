@@ -9,7 +9,7 @@
 #ifndef CTECBinaryTree_hpp
 #define CTECBinaryTree_hpp
 
-#include "TreeNode.hpp"
+#include "TreeNode.cpp"
 template<class Type>
 class CTECBinaryTree
 {
@@ -20,8 +20,8 @@ private:
     void calculateSize(TreeNode<Type> * currentNode);
     bool balenced;
     bool contains(Type value, TreeNode<Type> * currentTree);
-    TreeNode<Type> * getRightMostChild(TreeNode<Type> leftSubTree);
-    TreeNode<Type> * getLeftMostChild(TreeNode<Type> rightSubTree);
+    TreeNode<Type> * getRightMostChild(TreeNode<Type> * leftSubTree);
+    TreeNode<Type> * getLeftMostChild(TreeNode<Type> * rightSubTree);
 
     
 public:

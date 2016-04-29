@@ -123,7 +123,11 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int 
     vertexQueue.push(vertex);
 }
 
-
+template <class Type>
+int CTECGraph<Type> :: size()
+{
+    return manyVertices;
+}
 
 
 

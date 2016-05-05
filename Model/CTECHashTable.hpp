@@ -16,11 +16,11 @@ class CTECHashTable
 private:
     int size;
     int capacity;
-    Type * internalStorage();
+    Type * internalStorage;
     double efficiencyPercentage();
     int findPos(const Type& value);
     int handleCollision(const Type& value);
-    void updateSize();
+    void updateCapacity();
     
     
     

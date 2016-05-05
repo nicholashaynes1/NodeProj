@@ -270,6 +270,7 @@ void NodeController::tryTrees()
     
     CTECBinaryTree<int> testTree;
     cout<<"this is pre removal" << endl;
+    
     testTree.insert(1);
     testTree.insert(5);
     testTree.insert(7);

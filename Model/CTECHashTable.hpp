@@ -14,8 +14,8 @@ template <class Type>
 class CTECHashTable
 {
 private:
-    int size();
-    int capacity();
+    int size;
+    int capacity;
     Type * internalStorage();
     double efficiencyPercentage();
     int findPos(const Type& value);

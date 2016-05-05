@@ -226,20 +226,24 @@ TreeNode<Type> * CTECBinaryTree<Type>:: getLeftMostChild(TreeNode<Type> * rightS
 template<class Type>
 void CTECBinaryTree<Type> :: remove(const Type& value)
 {
+    
     TreeNode<Type> * current;
     TreeNode<Type> * trailing;
     
     if(!contains(value))
     {
+       
         return;
     }
     else
     {
+        
         current = root;
         trailing =root;
-        
+        cout<<"got here" << endl;
         while(current != nullptr && current->getValue() != value)
         {
+            cout<<"got here" << endl;
             trailing = current;
             if(current->getValue() > value)
             {
@@ -260,7 +264,7 @@ void CTECBinaryTree<Type> :: remove(const Type& value)
         }
         else
         {
-            remove(trailing->hetRightChild());
+            remove(trailing->getRightChild());
         }
     }
     
@@ -268,6 +272,7 @@ void CTECBinaryTree<Type> :: remove(const Type& value)
 template<class Type>
 void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToBeRemoved)
 {
+    
     TreeNode<Type> * current;
     TreeNode<Type> * trailing;
     TreeNode<Type> * temp;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADDB3F511CDBC211006F9471 /* CTECHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADDB3F4F1CDBC211006F9471 /* CTECHashTable.cpp */; };
 		ADDF2D471CCE8F9C0098FF21 /* CTECGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADDF2D451CCE8F9C0098FF21 /* CTECGraph.cpp */; };
 		ADE11A631CBC1D0400F2A725 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE11A611CBC1D0400F2A725 /* TreeNode.cpp */; };
 		ADE11A661CBC2D4700F2A725 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE11A641CBC2D4700F2A725 /* CTECBinaryTree.cpp */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		ADD56AE71CC6BDE800AA1016 /* CTECBinaryTree.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECBinaryTree.hh; sourceTree = "<group>"; };
+		ADDB3F4F1CDBC211006F9471 /* CTECHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECHashTable.cpp; sourceTree = "<group>"; };
+		ADDB3F501CDBC211006F9471 /* CTECHashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECHashTable.hpp; sourceTree = "<group>"; };
 		ADDF2D451CCE8F9C0098FF21 /* CTECGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECGraph.cpp; sourceTree = "<group>"; };
 		ADDF2D461CCE8F9C0098FF21 /* CTECGraph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECGraph.hpp; sourceTree = "<group>"; };
 		ADE11A611CBC1D0400F2A725 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				ADD56AE71CC6BDE800AA1016 /* CTECBinaryTree.hh */,
 				ADDF2D451CCE8F9C0098FF21 /* CTECGraph.cpp */,
 				ADDF2D461CCE8F9C0098FF21 /* CTECGraph.hpp */,
+				ADDB3F4F1CDBC211006F9471 /* CTECHashTable.cpp */,
+				ADDB3F501CDBC211006F9471 /* CTECHashTable.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				ADEADD8A1C99DC1000858480 /* CTECArray.cpp in Sources */,
 				ADE11A661CBC2D4700F2A725 /* CTECBinaryTree.cpp in Sources */,
 				ADEADD921C99EBB500858480 /* CTECList.cpp in Sources */,
+				ADDB3F511CDBC211006F9471 /* CTECHashTable.cpp in Sources */,
 				ADEADD8D1C99DC1000858480 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

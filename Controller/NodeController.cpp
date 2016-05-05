@@ -269,6 +269,7 @@ void NodeController::tryTrees()
 {
     
     CTECBinaryTree<int> testTree;
+    cout<<"this is pre removal" << endl;
     testTree.insert(1);
     testTree.insert(5);
     testTree.insert(7);
@@ -276,9 +277,15 @@ void NodeController::tryTrees()
     testTree.insert(2);
     testTree.insert(8);
     testTree.insert(12);
+    testTree.inorderTraversal(testTree.getRoot());
+ 
     
-    testTree.getSize();
-    testTree.postorderTraversal(testTree.getRoot());
+    testTree.remove(1);
+    cout<<"this is post removal" << endl;
+    testTree.inorderTraversal(testTree.getRoot());
+   
+   
+
     
     
     

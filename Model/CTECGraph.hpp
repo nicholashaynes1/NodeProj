@@ -28,7 +28,7 @@ public:
     void removeEdge(int source, int target);
     Type& operator [] (int vertex);
     Type operator [] (int vertex) const;
-    int size();
+    int size() const;
     bool isEdge(int source, int target)const;
     std::set<int> neighbors(int vertex) const;
     void depthFirstTraversal(CTECGraph<Type> graph, int vertex);

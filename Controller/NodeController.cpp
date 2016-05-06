@@ -57,24 +57,8 @@ void NodeController :: testList()
 
 void NodeController :: start()
 {
-    tryTrees();
-//    doMergesort();
-	
-//	arrayTimer.startTimer();
-//
-//	for(int index = 0; index < notHipsterInts->getSize(); index++)
-//	{
-//		notHipsterInts->set(index, (index *23));
-//	}
-//
-//	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
-//	{
-//		cout << "tuh contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
-//	}
-//
-//	arrayTimer.stopTimer();
-//	arrayTimer.displayTimerInfo();
-
+//    tryTrees();
+    tryGraphs();
 }
 
 
@@ -261,8 +245,13 @@ void NodeController::doQuick()
 
 void NodeController::tryGraphs()
 {
-//    CTECGraph<int> testGraph;
-//    testGraph.addVertex(4);
+    CTECGraph<int> testGraph;
+    testGraph.addVertex(4);
+    testGraph.addVertex(13);
+    testGraph.addVertex(2);
+    testGraph.breadthFirstTraversal(testGraph,2);
+    testGraph.depthFirstTraversal(testGraph,5);
+    
 }
 
 void NodeController::tryTrees()

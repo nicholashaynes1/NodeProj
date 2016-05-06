@@ -14,6 +14,24 @@ using namespace std;
 template<class Type>
 const int CTECGraph<Type> :: MAXIMUM;
 
+
+template<class Type>
+CTECGraph<Type> :: CTECGraph()
+{
+    manyVertices = 0;
+}
+
+
+template<class Type>
+CTECGraph<Type> :: ~CTECGraph()
+{
+    
+}
+
+
+
+
+
 template<class Type>
 void CTECGraph<Type> :: addVertex(const Type& value)
 {
@@ -28,6 +46,7 @@ void CTECGraph<Type> :: addVertex(const Type& value)
     }
     labels[newVertexNumber] = value;
 }
+
 template<class Type>
 void CTECGraph<Type> :: addEdge(int source, int target)
 {
@@ -124,7 +143,7 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int 
 }
 
 template <class Type>
-int CTECGraph<Type> :: size()
+int CTECGraph<Type> :: size() const
 {
     return manyVertices;
 }

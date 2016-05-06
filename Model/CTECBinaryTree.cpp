@@ -256,6 +256,7 @@ void CTECBinaryTree<Type> :: remove(const Type& value)
         }
         if(current == root)
         {
+            cout << "removing root" << endl;
             remove(root);
         }
         else if(trailing->getValue() > value)
@@ -290,13 +291,13 @@ void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToBeRemoved)
     else if(nodeToBeRemoved->getLeftChild() == nullptr)
     {
         temp = nodeToBeRemoved;
-        nodeToBeRemoved = temp->getRightChild();
+        nodeToBeRemoved = nodeToBeRemoved->getRightChild();
         delete temp;
     }
     else if(nodeToBeRemoved->getRightChild() == nullptr)
     {
         temp = nodeToBeRemoved;
-        nodeToBeRemoved = temp->getLeftChild();
+        nodeToBeRemoved = nodeToBeRemoved->getLeftChild();
         delete temp;
     }
     else

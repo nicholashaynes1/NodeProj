@@ -24,6 +24,9 @@ private:
     int handleCollision(HashNode<Type> currentNode);
     void updateCapacity();
     
+    int getNextPrime();
+    bool isPrime(int candidateNumber);
+    
     
     
 public:

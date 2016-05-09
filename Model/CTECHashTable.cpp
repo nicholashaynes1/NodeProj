@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "CTECHashTable.hpp"
+#include <cmath>
 using namespace std;
 
 
@@ -63,3 +64,55 @@ int CTECHashTable<Type> :: findPos(HashNode<Type> currentNode)
     pos = currentNode.getKey() % capacity;
     return pos;
 }
+
+
+template<class Type>
+int CTECHashTable<Type> :: getNextPrime()
+{
+    int nextPrime = capacity;
+    
+    nextPrime *= 2;
+    nextPrime++;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime+=2;
+    }
+    
+    
+    return nextPrime;
+}
+
+template<class Type>
+bool CTECHashTable<Type> :: isPrime(int candidateNumber)
+{
+    bool isPrime = true;
+    if(candidateNumber <=1)
+    {
+        isPrime = false;
+    }
+    else if(candidateNumber == 2 || candidateNumber == 3)
+    {
+        isPrime = true;
+    }
+    else if(candidateNumber % 2 ==0)
+    {
+        isPrime = false;
+    }
+    else
+    {
+        for(int spot = 3; spot < sqrt(candidateNumber) + 1; spot+=2)
+        {
+            if(spot)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    
+    
+    return isPrime;
+    
+}
+

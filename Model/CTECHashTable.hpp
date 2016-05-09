@@ -10,16 +10,17 @@
 #define CTECHashTable_hpp
 
 #include <stdio.h>
+#include "HashNode.cpp"
 template <class Type>
 class CTECHashTable
 {
 private:
     int size;
     int capacity;
-    Type * internalStorage;
+    HashNode<Type> * internalStorage;
     double efficiencyPercentage();
-    int findPos(const Type& value);
-    int handleCollision(const Type& value);
+    int findPos(HashNode<Type> currentNode);
+    int handleCollision(HashNode<Type> currentNode);
     void updateCapacity();
     
     
@@ -27,9 +28,9 @@ private:
 public:
     CTECHashTable();
     ~CTECHashTable();
-    void add(const Type& value);
-    bool remove(const Type& value);
-    bool contains(const Type& value);
+    void add(HashNode<Type> currentNode);
+    bool remove(HashNode<Type> currentNode);
+    bool contains(HashNode<Type> currentNode);
     int getSize();
     
     

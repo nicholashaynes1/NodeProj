@@ -19,6 +19,7 @@ private:
     int capacity;
     HashNode<Type> * internalStorage;
     double efficiencyPercentage();
+    
     int findPos(HashNode<Type> currentNode);
     int handleCollision(HashNode<Type> currentNode);
     void updateCapacity();

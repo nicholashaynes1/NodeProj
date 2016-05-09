@@ -51,5 +51,15 @@ void CTECHashTable<Type> :: add(HashNode<Type> currentNode)
         internalStorage[insertionIndex] = currentNode;
         size++;
     }
+    
+    
+   
 }
 
+ template<class Type>
+int CTECHashTable<Type> :: findPos(HashNode<Type> currentNode)
+{
+    int pos = 0;
+    pos = currentNode.getKey() % capacity;
+    return pos;
+}

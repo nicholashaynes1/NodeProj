@@ -154,4 +154,23 @@ bool CTECHashTable<Type> :: contains(HashNode<Type> currentNode)
     return isInTable;
 }
 
+template<class Type>
+bool CTECHashTable<Type> :: remove(HashNode<Type> currentNode)
+{
+    bool hasBeenRemoved = false;
+    if(contains(currentNode))
+    {
+        int possibleLocation = findPos(currentNode);
+        
+        while(internalStorage[possibleLocation] && !hasBeenRemoved)
+        {
+            if(internalStorage[possibleLocation].getValue() == currentNode.getValue())
+            {
+                hasBeenRemoved = true;
+                internalStorage[possibleLocation] = nullptr;
+            }
+            possibleLocation = (possibleLocation + 1) % capacity;
+        }
 
+    }
+}

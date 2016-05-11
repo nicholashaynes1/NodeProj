@@ -140,6 +140,10 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int 
     markedVertices[vertex] = true;
     cout << currentGraph[vertex] << endl;
     vertexQueue.push(vertex);
+    while(!vertexQueue.empty())
+    {
+        connections = currentGraph.neighbors(vertexQueue)
+    }
 }
 
 template <class Type>

@@ -19,12 +19,16 @@ CTECHashTable<Type> :: CTECHashTable()
     this->capcity = 101;
     this->efficencyPercentage = .667;
     this->internalStorage = new HashNode<Type>[capacity];
+    this->chainedSize = 0;
+    this->chainedCapacity = 101;
+    this->chainedStorage = new CTECList<HashNode <Type>>[chainedCapacity];
 }
 
 template<class Type>
 CTECHashTable<Type> :: ~CTECHashTable()
 {
     delete [] internalStorage;
+    delete [] chainedStorage;
 }
 
 template<class Type>
@@ -44,6 +48,8 @@ void CTECHashTable<Type> :: add(HashNode<Type> currentNode)
         int insertionIndex = findPos(currentNode);
         if(internalStorage[insertionIndex] != nullptr)
         {
+            insertionIndex = handleCollision(currentNode);
+            
             while(internalStorage[insertionIndex] != nullptr)
             {
                 insertionIndex = (insertionIndex + 1) % capacity;
@@ -174,3 +180,30 @@ bool CTECHashTable<Type> :: remove(HashNode<Type> currentNode)
 
     }
 }
+
+
+
+
+template<class Type>
+int CTECHashTable<Type> :: handleCollision(HashNode<Type> currentNode)
+{
+    int updatedPos = findPos(currentNode);
+    
+    
+    updatedPos = ( 47 + (updatedPos * updatedPos)) % capacity;
+    
+    
+    
+    return updatedPos;
+}
+
+
+
+
+
+
+
+
+
+
+

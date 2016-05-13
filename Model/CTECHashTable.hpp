@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "HashNode.cpp"
-#include "CTECList.cpp"
+#include "CTECList.h"
 template <class Type>
 class CTECHashTable
 {
@@ -21,7 +21,7 @@ private:
     int chainedCapacity;
     int chainedSize;
     CTECList<HashNode<Type>> * chainedStorage;
-    HashNode<Type> * internalStorage;
+    HashNode<Type> ** internalStorage;
     double efficiencyPercentage();
     void updateChainCapacity();
     

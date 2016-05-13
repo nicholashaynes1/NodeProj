@@ -142,7 +142,17 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int 
     vertexQueue.push(vertex);
     while(!vertexQueue.empty())
     {
-        connections = currentGraph.neighbors(vertexQueue)
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+            {
+                if(!markedVertices[*setIterator])
+                {
+                    markedVertices[*setIterator] = true;
+                    cout<<currentGraph[*setIterator]<<endl;
+                    vertexQueue.push(*setIterator);
+                }
+            }
     }
 }
 

@@ -12,8 +12,10 @@ using namespace std;
 NodeController :: NodeController()
 {
  //auto-generated constructor
-notHipsterInts = new CTECArray<int>(5);
-numbers = new CTECList<int>();
+    notHipsterInts = new CTECArray<int>(5);
+    numbers = new CTECList<int>();
+    hashes = new CTECHashTable<int>();
+
 }
 
 NodeController :: ~NodeController()
@@ -57,8 +59,9 @@ void NodeController :: testList()
 
 void NodeController :: start()
 {
+    tryHashTable();
 //    tryTrees();
-    tryGraphs();
+//    tryGraphs();
 }
 
 
@@ -293,16 +296,34 @@ void NodeController::tryTrees()
     cout<<"this is post removal" << endl;
     testTree.inorderTraversal(testTree.getRoot());
    
-   
-
-    
-    
-    
 
 }
 
 
-
+void NodeController::tryHashTable()
+{
+    CTECHashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for(int spot = 0; spot < 10; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> * temp = new HashNode<int>(randomKey, randomValue);
+        tempTable.add(*temp);
+        tempArray[spot] = *temp;
+    }
+    bool test = tempTable.contains(tempArray[0]);
+    string result;
+    if(test)
+    {
+        result = "yup";
+    }
+    else
+    {
+        result = "nope";
+    }
+    
+}
 
 
 

@@ -15,6 +15,7 @@
 #include "../model/CTECList.cpp"
 #include "../model/CTECGraph.cpp"
 #include "../model/CTECBinaryTree.cpp"
+#include "../model/CTECHashTable.cpp"
 
 
 #include <string>
@@ -26,6 +27,7 @@ private:
 	Timer arrayTimer;
 	CTECArray<int> * notHipsterInts;
 	CTECList<int> * numbers;
+    CTECHashTable<int> * hashes;
     void sortData();
     
     int * mergeData;
@@ -41,6 +43,7 @@ private:
     
     void tryGraphs();
     void tryTrees();
+    void tryHashTable();
 
 public:
 	void testList();

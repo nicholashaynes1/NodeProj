@@ -22,7 +22,7 @@ private:
     int chainedSize;
     CTECList<HashNode<Type>> * chainedStorage;
     HashNode<Type> ** internalStorage;
-    double efficiencyPercentage();
+    double efficiencyPercentage;
     void updateChainCapacity();
     
     int findPos(HashNode<Type> currentNode);
